@@ -1,0 +1,155 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee !important;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 200;
+}
+.heading {
+    border-bottom: 2px solid #BF0004;
+    margin: 20px auto;
+    text-align: center;
+}
+.logo{
+    width: 30%;
+    float: left;
+}
+.logo img{
+    width: 40%;
+    float: right;
+}
+.title{
+    margin-left: 20%;
+}
+
+/* CONTAINERS */
+
+.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.four { width: 32.26%; max-width: 32.26%;}
+
+
+/* COLUMNS */
+
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input[type=radio]{
+    display: none;
+}
+
+.form label{
+    position: relative;
+    /*color: #fff;*/
+    color: #333;
+    /*background-color: #aaa;*/
+    background-color: #fff;
+    font-size: 18px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+    border: 3px solid #333;
+    background-color: #BF0004;
+    color: #fff;
+}
+.form .plan input:active + label{
+    border: 3px solid #333;
+    background-color: #F80000;
+    color: #fff;
+}
+
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+    content: "\2713";
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #BF0004;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+.w-5 {
+    width: 18.6%;
+}
+.mt-1 {
+    margin-top: 10px;
+}
+.mt-2 {
+    margin-top: 20px;
+}
+.opinion-textbox {
+    height: 50px;
+    border: 1px solid #fff;
+    width: 100%;
+}
+.opinion-textbox:focus {
+    height: 50px;
+    border: 1px solid #BF0004 !important;
+    box-shadow: #BF0004 !important;
+}
+
+.submit{
+    padding: 15px 60px;
+    display: inline-block;
+    border: none;
+    margin: 20px 0;
+    background-color: #BF0004;
+    color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: #F80000;
+}
+@media (max-width: 767px){
+    .logo img{
+        width: 85% !important;
+        float: right;
+    }
+
+}

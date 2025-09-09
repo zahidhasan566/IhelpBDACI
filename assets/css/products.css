@@ -1,0 +1,55 @@
+.item{
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 200px;
+    margin: 3px;
+}
+.item:hover{
+    box-shadow: 2px 2px 7px #80b8c2;
+}
+div.image img{
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom:0;
+    overflow:auto;
+}
+.image{
+    position: relative;
+    height: 75%;
+}
+div.details{
+    border-top:1px solid #eaeaea;
+}
+.details.productname{
+    text-align: center;
+    font-size: 12px;
+    color: #A70A0A;
+    margin: 0;
+}
+.details.productmodel{
+    text-align: center;
+    font-size: 12px;
+    color: #5F627A;
+    font-weight: bold;
+}
+div.detailimage img{
+    max-width: 90%;
+}
+div.bikeintro p.productname{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 3px;;
+}
+div.bikeintro p.productmodel{
+    color: rgb(85, 115, 149);
+    font-size: 14px;
+    margin: 0;
+    border-bottom: 2px solid #e1e1e1;
+    margin-bottom: 10px;
+}

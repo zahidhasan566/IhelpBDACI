@@ -1,0 +1,119 @@
+.ln_solid_1{
+    border-top: 1px solid #e5e5e5;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 5px 0;
+}
+div.invoicename h4,div.invoicename h5{
+    margin: 5px;
+    text-align: center;
+}
+div.invoicename h4{
+    font-weight: bold;
+}
+div.invoicename{
+    max-width: 95%;
+    max-height: 110px;
+    margin-bottom: 15px;
+}
+.span1{
+    float: left;
+}
+.span2{
+    float: right;
+}
+div.left {
+    float: left;
+    height: 100%;
+    margin-right: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+div.right {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+div.left1 {
+    width: 215px;
+}
+div.right1 {
+    width: calc(100% - 225px);
+}
+div.left2 {
+    width: 60px;
+}
+div.right2 {
+    width: calc(100% - 67px);
+}
+div.left3 {
+    width: 50px;
+}
+div.right3 {
+    width: calc(100% - 58px);
+}
+div.left4 {
+    width: 60px;
+}
+div.right4 {
+    width: calc(100% - 67px);
+}
+div.left5 {
+    width: 150px;
+}
+div.right5 {
+    width: calc(100% - 160px);
+}
+div.left6 {
+    width: 30px;
+}
+div.right6 {
+    width: calc(100% - 40px);
+}
+div.left8 {
+    width: 52px;
+}
+div.right8 {
+    width: calc(100% - 60px);
+}
+.signature{
+    margin-top: 30px;
+}
+.signature div{
+    text-align: center;
+}
+.invoicetbl{
+    width: 100%;
+}
+.salescert p{
+    margin: 0 0 3px;
+}
+.dateno{
+    margin-bottom: 15px;
+}
+.invoicetbl tbody tr td{
+    text-align: center;
+}
+
+#message{
+    clear: both;
+}
+.error{
+    display: block;
+    text-align: right;
+    color:red;
+}
+.checkable{
+    border-bottom: 1px solid #eaeaea;
+    padding: 4px;
+}
+#walkin{
+    margin-left: 8px;
+    outline: none;
+}
+.checkable > label > span{
+    margin-left: 5px;
+    font-weight: bold;
+}

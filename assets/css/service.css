@@ -1,0 +1,232 @@
+#page-wrapper{
+    min-height: 500px;
+}
+.search{
+    box-sizing: border-box;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: 5px 6px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+.searchpanel input{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*html{font-family: Verdana, Tahoma, Arial; font-size: 14px; line-height: 1.61;}*/
+.selectparent{
+    position: relative;
+}
+.Expander{position: absolute;display: block; width: 95%; height: 35px; overflow: hidden;z-index: 222;}
+.Expander:hover{height: auto;}
+
+.Selectable{display: block; cursor: pointer;}
+.Selectable > input[type = 'checkbox']{display: none;}
+.Selectable > input[type = 'checkbox']:checked + span{
+    background-image: url('../images/tick.png');
+    background-position: 5px 6px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+.Selectable > span{display: block; border: 1px #ddd solid; background: #FFF; padding: 5px; color: #000; font-weight: bold;}
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background-position: right;
+    background: #fff url("../images/arrowdown.gif") no-repeat 97% 50%;
+}
+div#service_container.panel-body h4,div#sp_service_container.panel-body h4{
+    margin-left: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #ADBDCE;
+}
+.form-control.btn.btn-info.pull-right,input#sp_addmore.form-control.btn.btn-info.pull-right{
+    width: auto;
+    background: #2A3F54;
+    border: 1px solid #2A3F54;
+}
+div.alert.alert-info.alert-dismissable label input{
+    outline: none;
+}
+.select-style select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+div.form-group label.control-label.col-xs-12{
+    text-align: left;
+}
+
+input#addmore.form-control.btn.btn-info,input#sp_addmore.form-control.btn.btn-info{
+    margin-left: 25px;
+}
+div.alert.alert-info.alert-dismissable{
+    text-align: center;
+}
+div.alert.alert-info.alert-dismissable label{
+    margin-right: 20px;
+}
+
+div.col-xs-12 label.control.btn.btn-info span input,
+label.control.btn.btn-info label input#isrepair{
+    outline: none;
+}
+div.alert.alert-info.alert-dismissable label span{
+    margin-left: 5px;    
+}
+
+.control label {
+    display: block;
+    float: left;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+.control input {
+    /*vertical-align: middle;*/
+}
+.control label span {
+    vertical-align: middle;
+    margin-left:5px;
+}
+div.col-xs-12 label.control.btn.btn-info{
+    background: rgb(42, 63, 84) none repeat scroll 0% 0%;
+    color: rgb(255, 255, 255);
+    border-color: rgb(42, 63, 84);
+}
+#addmore{
+    margin-right: 20px;
+}
+#sp_addmore{
+    margin-right: 20px;
+}
+@media (max-width: 480px) {
+    .searchpanel{
+        width: 100%
+    }
+}
+@media (min-width: 768px) {
+    .searchpanel{
+        width: 100%
+    }
+}
+.searchpanel{
+    max-width: 300px;
+    float: right;
+}
+div.modal-body div.checkbox{
+    border: 1px solid #eaeaea;
+    padding: 5px;
+    border-radius: 3px;
+}
+input.checkchange{
+    margin: 0;
+    outline:  none;
+}
+.checkchange:focus {
+    outline: 0;
+}
+
+.unitprice{
+    border: 0;
+    max-width: 100%;
+    text-align: center;
+}
+.a-product{
+    overflow: hidden;
+    padding-top: 5px;
+    border: 1px solid #ECECEC;
+    box-shadow: 0px 23px 21px -39px inset;
+    background: #fff;
+}
+.a-product:hover{
+    border:1px dotted #F2F2F2;
+    box-shadow: 4px 4px 5px #d4d4d4;
+}
+.textleft{
+    text-align: left;
+}
+.paid{
+    display: none;
+}
+.paidadder{
+    overflow: hidden;
+    border: 1px solid rgb(234, 234, 234);
+    padding: 5px;
+}
+.parts,.paidparts,.spareitemlist{
+    background: #fff url("../images/arrowdown.gif") no-repeat 97% 50%;
+    cursor: pointer;
+}
+.repairspan{
+    padding-left: 3px;
+}
+.tagged_id{
+    background: #EFF0EF;
+    padding: 1px 4px;
+    margin-right: 3px;
+    color: #000;
+    border:1px solid #dedede;
+}
+.tagged_id:hover{
+    cursor:pointer;
+}
+.close_it,.deletethis{
+    background: url('../images/close.png') no-repeat;
+    border-radius: 100%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    opacity: .3;
+}
+.close_it:hover,.deletethis:hover{
+    opacity: 1;
+}
+#addedfreeproducts{
+    margin: 5px 0px;
+    border: 1px solid rgb(234, 234, 234);
+    padding: 5px 0px;
+}
+.fileclose{
+    clear: both;
+}
+.filefamily p{
+    position: absolute;
+    right: 2px;
+    padding: 3px 5px;
+    border: 1px solid #C3C3C3;
+    border-radius: 12px;
+    margin: 0;
+    font-size: 10px;
+    top: 2px;
+}
+.filefamily p:hover{
+    background: red;
+    color:#fff;
+}
+input#plusfileinput{
+    float: none;
+}
+.filefamily {
+    position: relative;
+    overflow: hidden;
+}
+.nopadding {
+    padding: 0px;
+}

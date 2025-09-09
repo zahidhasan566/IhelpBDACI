@@ -1,0 +1,25 @@
+@media print{
+    body * {
+        visibility: hidden;
+    }
+    #printbody, #printbody * {
+        visibility: visible;
+    }
+    #btnprint{
+        display:none;
+    }
+    .x_title{
+        display:none;
+    }
+    .x_content br{
+        display:none;
+    }
+    .line  .values{
+        clear: left;
+    }
+}
+@media screen and (max-width: 480px){
+    .line  .values{
+        clear: left;
+    }
+}

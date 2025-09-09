@@ -1,0 +1,252 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class iHelpBdApiRequest extends CI_Controller
+{
+
+    public function __construct()
+    {
+        parent::__construct();
+        $data = array();
+    }
+    public function csiResult(){
+        $headers = $this->getAuthorizationHeader();
+        if(!empty($headers)){
+            if($headers==='MisDms4321@#'){
+                $data = file_get_contents('php://input');
+                $updateData  = $data ? json_decode($data,TRUE):[];
+
+                if(!empty($data)){
+                    $message  = '';
+                    foreach ($updateData as $singleData){
+                       if(array_key_exists("job_card_no",$singleData) && array_key_exists("csi_result",$singleData)){
+                           $message  = 'success';
+
+                       }
+                       else {
+                           $response = array(
+                               'status' => 200,
+                               'data' => array(
+                                   'success' => 0,
+                                   'error' => 'Parameter does not matched'
+                               )
+                           );
+                       }
+                    }
+                    if($message==='success'){
+                        $this->updateCsiResult($updateData);
+                        $response = array(
+                            'status' => 200,
+                            'data' => array(
+                                'success'=>1,
+                                'error'=>[]
+                            )
+                        );
+                    }
+
+
+                }
+                else{
+                    $response = array(
+                        'status' => 200,
+                        'data' => array(
+                            'success'=>0,
+                            'error'=>json_decode($data,TRUE)
+                        )
+                    );
+                }
+            }
+            else{
+                $response = array(
+                    'status' => 401,
+                    'message' => 'Unauthorized'
+                );
+            }
+            echo  json_encode($response);
+        }
+    }
+    public function fotonCsiResult(){
+        $headers = $this->getAuthorizationHeader();
+        if(!empty($headers)){
+            if($headers==='MisDmsFoton@4321@#'){
+                $data = file_get_contents('php://input');
+                $updateData  = $data ? json_decode($data,TRUE):[];
+
+                if(!empty($data)){
+                    $message  = '';
+                    foreach ($updateData as $singleData){
+                        if(array_key_exists("job_card_no",$singleData) && array_key_exists("csi_result",$singleData)){
+                            $message  = 'success';
+
+                        }
+                        else {
+                            $response = array(
+                                'status' => 200,
+                                'data' => array(
+                                    'success' => 0,
+                                    'error' => 'Parameter does not matched'
+                                )
+                            );
+                        }
+                    }
+                    if($message==='success'){
+                        $this->updateFotonCsiResult($updateData);
+                        $response = array(
+                            'status' => 200,
+                            'data' => array(
+                                'success'=>1,
+                                'error'=>[]
+                            )
+                        );
+                    }
+
+
+                }
+                else{
+                    $response = array(
+                        'status' => 200,
+                        'data' => array(
+                            'success'=>0,
+                            'error'=>json_decode($data,TRUE)
+                        )
+                    );
+                }
+            }
+            else{
+                $response = array(
+                    'status' => 401,
+                    'message' => 'Unauthorized'
+                );
+            }
+            echo  json_encode($response);
+        }
+    }
+
+    public function AgriMotorsCsiResult(){
+        $headers = $this->getAuthorizationHeader();
+        if(!empty($headers)){
+            if($headers==='MisDmsAgriMotors@4321@#'){
+                $data = file_get_contents('php://input');
+                $updateData  = $data ? json_decode($data,TRUE):[];
+
+                if(!empty($data)){
+                    $message  = '';
+                    foreach ($updateData as $singleData){
+                        if(array_key_exists("job_card_no",$singleData) && array_key_exists("csi_result",$singleData)){
+                            $message  = 'success';
+
+                        }
+                        else {
+                            $response = array(
+                                'status' => 200,
+                                'data' => array(
+                                    'success' => 0,
+                                    'error' => 'Parameter does not matched'
+                                )
+                            );
+                        }
+                    }
+                    if($message==='success'){
+                        $this->updateAgriMotorsCsiResult($updateData);
+                        $response = array(
+                            'status' => 200,
+                            'data' => array(
+                                'success'=>1,
+                                'error'=>[]
+                            )
+                        );
+                    }
+
+
+                }
+                else{
+                    $response = array(
+                        'status' => 200,
+                        'data' => array(
+                            'success'=>0,
+                            'error'=>json_decode($data,TRUE)
+                        )
+                    );
+                }
+            }
+            else{
+                $response = array(
+                    'status' => 401,
+                    'message' => 'Unauthorized'
+                );
+            }
+            echo  json_encode($response);
+        }
+    }
+
+    public function getAuthorizationHeader(){
+        $headers = null;
+        if (isset($_SERVER['Authorization'])) {
+            $headers = trim($_SERVER["Authorization"]);
+        }
+        else if (isset($_SERVER['HTTP_AUTHORIZATION'])) { //Nginx or fast CGI
+            $headers = trim($_SERVER["HTTP_AUTHORIZATION"]);
+        } elseif (function_exists('apache_request_headers')) {
+            $requestHeaders = apache_request_headers();
+            // Server-side fix for bug in old Android versions (a nice side-effect of this fix means we don't care about capitalization for Authorization)
+            $requestHeaders = array_combine(array_map('ucwords', array_keys($requestHeaders)), array_values($requestHeaders));
+            //print_r($requestHeaders);
+            if (isset($requestHeaders['Authorization'])) {
+                $headers = trim($requestHeaders['Authorization']);
+            }
+        }
+        return $headers;
+    }
+    public function updateCsiResult($data){
+
+        foreach ($data as $singleData){
+            $jobCardNo=$singleData['job_card_no'];
+            $csiResult=$singleData['csi_result'];
+            $sql = "update tblJobCard set CSIResult =$csiResult where JobCardNo='$jobCardNo'";
+            $query = $this->db->query($sql);
+            if($query){
+                $message='success';
+            }
+            else{
+                $message='error! update failed';
+            }
+        }
+        //echo $message;
+    }
+    public function updateFotonCsiResult($data){
+        foreach ($data as $singleData){
+            $jobCardNo=$singleData['job_card_no'];
+            $csiResult=$singleData['csi_result'];
+            $CI = & get_instance();
+            $CI->db = $this->load->database('foton', true);
+
+            $sql = "update tblJobCard set CSIResult =$csiResult where JobCardNo='$jobCardNo'";
+            $query = $this->db->query($sql);
+            if($query){
+                $message='success';
+            }
+            else{
+                $message='error! update failed';
+            }
+        }
+    }
+    public function updateAgriMotorsCsiResult($data){
+        foreach ($data as $singleData){
+            $jobCardNo=$singleData['job_card_no'];
+            $csiResult=$singleData['csi_result'];
+            $CI = & get_instance();
+            $CI->db = $this->load->database('motor_service_auto', true);
+
+            $sql = "update job_cards set csi =$csiResult where job_card_no='$jobCardNo'";
+            $query = $this->db->query($sql);
+            if($query){
+                $message='success';
+            }
+            else{
+                $message='error! update failed';
+            }
+        }
+    }
+}

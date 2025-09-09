@@ -1,0 +1,115 @@
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background-position: right;
+    background: #fff url("../images/arrowdown.gif") no-repeat 97% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.title {
+    border-bottom: 1px silver solid; 
+    padding-bottom: 5px; 
+    margin-bottom: 5px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color:black;    
+}
+
+.ui-autocomplete {
+    max-height: 150px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+    /* IE 6 doesn't support max-height
+     * we use height instead, but this forces the menu to always be this tall
+     */
+* html .ui-autocomplete {
+        height: 100px;
+}
+
+
+.table-condensed > thead > tr > th, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td
+{
+    text-align: left;
+}
+.trhead{
+    text-align: center !important;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: tahoma;
+    background-color: #dad200;
+}
+
+.trhead{
+    text-align: center !important;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: tahoma;
+    background-color: #30302f;
+    color: White;
+}
+
+.bottom2tr{
+    text-align: center !important;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: tahoma;
+    background-color: #a6a69c;
+}
+.bottom3tr{
+    text-align: center !important;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: tahoma;
+    background-color: #cfcfca;
+}
+
+.section-title {
+    border-bottom: 1px silver solid; 
+    padding-bottom: 5px; 
+    margin: 0 20px 5px 10px;
+    color: blue;
+    font-weight: bold;    
+    margin-bottom: 20px;
+}
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}
+.ui-dialog-osx {
+    -moz-border-radius: 0 0 8px 8px;
+    -webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px; border-width: 0 8px 8px 8px;
+}
+#dialog {
+    position: relative;
+    display:none;
+    z-Index:99999;
+}
+th{
+    vertical-align: middle !important;
+}
+td{
+    vertical-align: middle !important;
+    font-size: 16px;
+}
