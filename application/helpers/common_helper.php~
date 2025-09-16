@@ -144,18 +144,6 @@ function utf8ize($d) {
     }
     return $d;
 }
-function log_to_file($folderPath, $fileName, $data) {
-    // Ensure the directory exists, create if it doesn't
-    if (!is_dir($folderPath)) {
-        mkdir($folderPath, 0777, true);  // Create the directory with full permissions
-    }
-
-    // Prepare the full file path
-    $filePath = $folderPath . '/' . $fileName;
-
-    // Append the data to the log file
-    file_put_contents($filePath, $data . "\n", FILE_APPEND);
-}
 
 function sendSms($receipient, $smstext='Sample Text') {
     $CI = & get_instance();

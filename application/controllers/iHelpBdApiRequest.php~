@@ -207,7 +207,7 @@ class iHelpBdApiRequest extends CI_Controller
             $sql = "update tblJobCard set CSIResult =$csiResult where JobCardNo='$jobCardNo'";
             $query = $this->db->query($sql);
             if($query){
-                $folderPath = 'application/logs/YamahahaCall';
+                $folderPath = 'public/log/YamahahaCall';
                 $fileName = 'Ivr-Result-' . date('Y-m-d') . '.txt';
                 $data = $jobCardNo . '-' . $csiResult;
                 log_to_file($folderPath, $fileName, $data);
@@ -229,10 +229,6 @@ class iHelpBdApiRequest extends CI_Controller
             $sql = "update tblJobCard set CSIResult =$csiResult where JobCardNo='$jobCardNo'";
             $query = $this->db->query($sql);
             if($query){
-                $folderPath = 'application/logs/FotonCall';
-                $fileName = 'Ivr-Result-' . date('Y-m-d') . '.txt';
-                $data = $jobCardNo . '-' . $csiResult;
-                log_to_file($folderPath, $fileName, $data);
                 $message='success';
             }
             else{
@@ -250,10 +246,6 @@ class iHelpBdApiRequest extends CI_Controller
             $sql = "update job_cards set csi =$csiResult where job_card_no='$jobCardNo'";
             $query = $this->db->query($sql);
             if($query){
-                $folderPath = 'application/logs/AgriMototrsCall';
-                $fileName = 'Ivr-Result-' . date('Y-m-d') . '.txt';
-                $data = $jobCardNo . '-' . $csiResult;
-                log_to_file($folderPath, $fileName, $data);
                 $message='success';
             }
             else{
